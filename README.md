@@ -13,7 +13,7 @@ These instructions will get you a copy of a Loop sample app that will send a tes
     0. Open the folder in XCode
     0. Make a copy of `Config/Keys.example.xcconfig` and call it `Config/Keys.xcconfig`
     0. In the `Keys.xcconfig` file provide values for the `LOOP_APP_ID_PROP` and `LOOP_APP_TOKEN_PROP` using your Loop `App ID` and `App Token` from the 'Settings' tab of the [Loop Developer Site](https://www.loop.ms).
-    0. **IMPORTANT** run `touch "Config/Hello Loop.xcconfig"` (this updates the timestamp for the file)
+    0. **IMPORTANT** run `touch "Config/Hello Loop.xcconfig"` (this will pull your ID and keys into the main config file)
   0. Find your test users in the "Users" dashboard at the [Loop Developer Site](https://www.loop.ms)
   0. In the `Keys.xcconfig` file provide values for the `LOOP_USER_ID_PROP` and `LOOP_DEVICE_ID_PROP` using a test `userID` and `deviceID` from the dashboard.
   0. From the command line in the project directory run `carthage update --platform iOS`
