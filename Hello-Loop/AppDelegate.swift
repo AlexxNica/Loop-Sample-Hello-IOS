@@ -12,28 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoopSDKListener {
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        var appID = ""
-        var appToken = ""
+        let appID = ""
+        let appToken = ""
 
-        var testUserId = ""
-        var testUserDeviceId = ""
+        let testUserId = ""
+        let testDeviceId = ""
 
-        var keys: NSDictionary?
-        
-        if let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist") {
-            keys = NSDictionary(contentsOfFile: path)
-        }
-        
-        if let dict = keys {
-            appID = (dict["LOOP_APP_ID_PROP"] as? String)!
-            appToken = (dict["LOOP_APP_TOKEN_PROP"] as? String)!
-
-            testUserId = (dict["LOOP_USER_ID_PROP"] as? String)!
-            testUserDeviceId = (dict["LOOP_DEVICE_ID_PROP"] as? String)!
-        }
-        
         LoopSDK.setUserID(testUserId);
-        LoopSDK.setDeviceID(testUserDeviceId);
+        LoopSDK.setDeviceID(testDeviceId);
         LoopSDK.initialize(self, appID: appID, token: appToken)
         print ("Loop SDK initialization started")
         
@@ -41,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoopSDKListener {
     }
     
     func onLoopInitialized() {
+        LoopSDK.loopLocationProvider.startListener()
+        
         print("Loop SDK initialization completed")
     }
     

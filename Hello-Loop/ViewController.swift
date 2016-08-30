@@ -27,16 +27,7 @@ class ViewController: UIViewController {
         self.successView.hidden = true
         self.sendButton.enabled = true
         
-        LoopSDK.syncManager.sendTestSignal() { err, response, body in
-            if(err != nil) {
-                return self.setFailureState(err!);
-            }
-            else if (response!.statusCode != 201) {
-                return self.setFailureState(message: "Server returned non success status code: \(response!.statusCode)")
-            }
-            
-            return self.setSuccessState();
-        }
+        LoopSDK.syncManager.forceSendSignals()
     }
     
     func resetSentState() {

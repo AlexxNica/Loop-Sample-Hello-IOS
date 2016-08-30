@@ -3,10 +3,6 @@
 //  Hello Loop
 //
 
-// include developer specific keys from the keys config file
-#include "Keys.xcconfig"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) LOOP_APP_ID_PROP=@\"$(LOOP_APP_ID_PROP)\" LOOP_APP_TOKEN_PROP=@\"$(LOOP_APP_TOKEN_PROP)\" LOOP_USER_ID_PROP=@\"$(LOOP_USER_ID_PROP)\" LOOP_DEVICE_ID_PROP=@\"$(LOOP_DEVICE_ID_PROP)\"
-
 SDKROOT = iphoneos
 
 CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer

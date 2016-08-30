@@ -46,7 +46,6 @@
 		F6E0F6461D0B3A15005A13E5 /* Hello Loop.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Hello Loop.xcconfig"; sourceTree = "<group>"; };
 		F6E0F6471D0B3A2F005A13E5 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		F6E0F6481D0B3A3A005A13E5 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		F6E0F6491D0B4038005A13E5 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +99,6 @@
 				F6E0F6461D0B3A15005A13E5 /* Hello Loop.xcconfig */,
 				F6E0F6471D0B3A2F005A13E5 /* Debug.xcconfig */,
 				F6E0F6481D0B3A3A005A13E5 /* Release.xcconfig */,
-				F6E0F6491D0B4038005A13E5 /* Keys.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
